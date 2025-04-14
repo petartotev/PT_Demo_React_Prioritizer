@@ -1,0 +1,124 @@
+.priority-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.priority-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Improved spacing between top-level priorities */
+.priority-list > div {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Create larger drop zones between items */
+.priority-list > div::after {
+  content: '';
+  position: absolute;
+  height: 20px; /* Increased height for easier dropping */
+  width: 100%;
+  bottom: -20px; /* Position after the element */
+  left: 0;
+  z-index: 5;
+}
+
+/* Make drop zones more visible when dragging */
+.priority-list.dragging > div::after {
+  background-color: rgba(0, 123, 255, 0.15);
+  border: 2px dashed rgba(0, 123, 255, 0.5);
+}
+
+.children-container {
+  min-height: 40px;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  /* Make this less "grabby" for parent items */
+  z-index: 1;
+  position: relative;
+}
+
+.children-container:not(.empty-container) {
+  border-left: 3px solid #6c757d;
+  margin-left: 10px;
+}
+
+.empty-container {
+  border: 1px dashed #ced4da;
+  background-color: #f8f9fa;
+}
+
+.dragging-over {
+  background-color: rgba(0, 123, 255, 0.15);
+  border: 2px dashed #007bff !important;
+  padding: 20px;
+}
+
+.drag-handle {
+  cursor: grab;
+  color: #6c757d;
+  padding: 5px;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.drop-hint {
+  color: #adb5bd;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+/* Increase spacing for nested items */
+.mb-3.ms-4 {
+  margin-bottom: 15px !important;
+  margin-left: 25px !important;
+}
+
+/* Style for clickable priority content */
+.priority-content {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.priority-content:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Export functionality styles */
+.export-card {
+  margin-bottom: 40px;
+}
+
+.priority-export {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e9ecef;
+  font-family: monospace;
+}
+
+/* Import modal styles */
+.modal-body code {
+  display: block;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  color: #212529;
+  margin-bottom: 15px;
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
