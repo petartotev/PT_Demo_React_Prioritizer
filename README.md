@@ -2,7 +2,34 @@
 PT_Demo_React_Prioritizer is a front end application to manage one's priorities.
 
 # Contents
+- [Prerequisites](#prerequisites)
 - [Setup with CRA](#setup-with-cra)
+
+## Prerequisites
+
+In order to create a React app with the latest version of `Next.js`, especially when using `Turbopack` (newer dev server):
+
+1. Go to https://nodejs.org
+2. Download the latest LTS version (currently node-v22.14.0-x64.msi)
+3. Run the installer
+- `C:\Program Files\nodejs\`
+- Custom setup
+  - [] Node.js runtime
+  - [✅] corepack manager
+  - [✅] npm package manager
+  - [✅] Online documentatiom shortcuts
+  - [✅] Add to PATH
+- Tools for Native Modules
+  - [✅] Automatically install the necessary tools
+4. Restart your terminal
+5. Check the new versions:
+```
+node -v
+  => v22.14.0
+npm -v
+  => 10.9.2
+```
+
 
 ## Setup with CRA
 
